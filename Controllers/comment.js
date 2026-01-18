@@ -1,5 +1,6 @@
 import {Comment} from '../Modals/comment.js';
 
+// Add a comment to a video
 export const addComment=async(req,res)=>{   
     try{
             let {video, message}=req.body;
@@ -11,7 +12,7 @@ export const addComment=async(req,res)=>{
         res.status(500).json({message:"Internal server error"});
     }
 }
-
+// Get comments for a specific video
 export const getCommentsByVideoId=async(req,res)=>{
    try{
            let {videoId}=req.params;
