@@ -1,4 +1,5 @@
 import { Video } from "../Modals/video.js";
+// Add a new video
 export const addVideo=async(req,res)=>{
     try {
         const {title,description,videoLink,category,thumbnail}=req.body;
@@ -10,7 +11,7 @@ export const addVideo=async(req,res)=>{
         res.status(500).json({message:"Internal server error"});
     }
 }
-
+//get all videos
 export const getVideos=async(req,res)=>{
     try {
         const videos=await Video.find().populate('user','channelName profilePic userName createdAt');
@@ -19,7 +20,7 @@ export const getVideos=async(req,res)=>{
         res.status(500).json({message:"Internal server error"});  }
 
     }
-
+//get video by id
 export const getVideosById=async(req,res)=>{
     try {
         let {id}=req.params;
@@ -30,7 +31,7 @@ export const getVideosById=async(req,res)=>{
         res.status(500).json({message:"Internal server error"});  }
         }
 
-
+//get videos by user id
 export const getVideosByUserID=async(req,res)=>{
     try {
         let {userId}=req.params;
