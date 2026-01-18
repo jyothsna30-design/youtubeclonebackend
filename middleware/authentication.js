@@ -1,6 +1,6 @@
 import jsonwebtoken from 'jsonwebtoken';
 import {User} from '../Modals/user.js';
-
+// Authentication middleware and token verification
 const authenticate = async (req, res, next) => {
     const token = req.cookies.token
     if (!token) {
