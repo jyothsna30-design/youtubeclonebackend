@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+//video schema and modal
 const videoSchema = new mongoose.Schema({
     user : {
         type: mongoose.Schema.Types.ObjectId,
