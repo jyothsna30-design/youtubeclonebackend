@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+//user schema and modal
 const userSchema = new mongoose.Schema({
     channelName: {
         type: String,
