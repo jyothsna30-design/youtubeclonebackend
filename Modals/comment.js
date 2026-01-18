@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+//comment schema and modal
 const commentSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
