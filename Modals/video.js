@@ -12,11 +12,6 @@ const videoSchema = new mongoose.Schema({
     description:{
         type: String,
         required: true},
-
-    description:{
-        type: String,
-        required: true},
-    
     videoLink:{
         type: String,
         required: true},
