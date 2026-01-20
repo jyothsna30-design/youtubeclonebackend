@@ -3,6 +3,7 @@ import { Video } from "../Modals/video.js";
 export const addVideo=async(req,res)=>{
     try {
         const {title,description,videoLink,category,thumbnail}=req.body;
+        console.log(req.user);
         const newVideo=new Video({ user:req.user._id,title,description,videoLink,category,thumbnail});
         await newVideo.save();
         res.status(201).json({message:"Video added successfully",video:newVideo});
